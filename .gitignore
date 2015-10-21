@@ -1,0 +1,12 @@
+*.aux
+*.bcf
+*.log
+*.out
+*.toc
+*.lyx
+*.pdf
+*.ptc
+*.tex.backup
+*.dvi
+*.xml
+/node_modules/*
