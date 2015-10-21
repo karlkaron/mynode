@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    h1= title
+    form#formAddUser(name="adduser",method="post",action="/adduser")
+        label User Name
+        input#inputUserName(type="text", placeholder="username", name="user")
+        br
+        br
+        label User e-mail
+        input#inputUserEmail(type="text", placeholder="useremail", name="email")
+        br
+        br
+        label First Name
+        input#inputUserFName(type="text", placeholder="first name", name="fname")
+        br
+        br
+        label Last Name
+        input#inputUserLName(type="text", placeholder="last name", name="lname")
+        br
+        br
+        button.btn-primary.btn-lg#btnSubmit(type="submit") Add &nbsp;
+          i.fa.fa-user-plus

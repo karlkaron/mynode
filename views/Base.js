@@ -1,6 +1,6 @@
-module.exports = function(response, template) {
+module.exports = function(response, views) {
 	this.response = response;
-	this.template = template;
+	this.views = views;
 };
 module.exports.prototype = {
 	extend: function(properties) {
@@ -12,8 +12,8 @@ module.exports.prototype = {
 		return Child;
 	},
 	render: function(data) {
-		if(this.response && this.template) {
-			this.response.render(this.template, data);
+		if(this.response && this.views) {
+			this.response.render(this.views, data);
 		}
 	}
 }

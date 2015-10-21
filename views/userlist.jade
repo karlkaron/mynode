@@ -1,0 +1,21 @@
+extends layout
+
+block content
+    h1.
+        User List
+    ul
+        each user, i in userlist
+            li
+              form#formRemUser(name="remuser",method="post",action="/remuser")
+                  input#inputUserID(type="hidden", value='#{user._id}', name="userID")
+                  a(href="mailto:#{user.email}")= user.user
+                  p
+                    | #{user.fname}
+                    | #{user.lname} &nbsp;&nbsp;
+                    br
+                    button.btn-primary.btn-sm#btnSubmit(type="submit") Remove user &nbsp;
+                      i.fa.fa-user-times
+              form#formEditUser(name="editmuser",method="post",action="/update")
+                  input#inputUserID(type="hidden", value='#{user._id}', name="userID")
+                  button.btn-primary.btn-sm#btnSubmit(type="submit") Edit user &nbsp;
+                    i.fa.fa-user

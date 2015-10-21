@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1= title
+    form#formAddUser(name="edituser",method="post",action="/edituser")
+        input#inputUserID(type="text", value='#{userID}', name="userID")
+        label User Name
+        input#inputUserName(type="text", value='', name="user")
+        br
+        br
+        label User e-mail
+        input#inputUserEmail(type="text", value='', name="email")
+        br
+        br
+        label First Name
+        input#inputUserFName(type="text", value='', name="fname")
+        br
+        br
+        label Last Name
+        input#inputUserLName(type="text", value='', name="lname")
+        br
+        br
+        button.btn-primary.btn-lg#btnSubmit(type="submit") Update &nbsp;
+          i.fa.fa-user
